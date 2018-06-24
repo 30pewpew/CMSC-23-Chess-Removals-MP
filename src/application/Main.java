@@ -2,12 +2,12 @@ package application;
 
 // Import dependencies
 import java.io.IOException;
-import application.controller.*;
+//import application.controller.*;
 import javafx.application.*;
 import javafx.fxml.*;
 import javafx.stage.*;
 import javafx.scene.*;
-import javafx.scene.image.Image;
+//import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 
 // Main Class
@@ -15,42 +15,23 @@ public class Main extends Application
 {
 	// Declare the stage
 	private Stage primaryStage;
+	private AnchorPane mainLayout;
 	
-	// Override for start
-	@Override public void start(Stage primaryStage)
+	@Override public void start(Stage primaryStage) throws IOException
 	{
-		// Setting stage as the primary stage
 		this.primaryStage = primaryStage;
-		
-		// Load FXML and respective controllers
-		// openmain();
+		this.primaryStage.setTitle("CMSC 23 Chess Removals MP");
+		showMainView();
 	}
-	
-	public void openMain()
+
+	private void showMainView() throws IOException
 	{
-		// Try catch statement
-		try
-		{
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("view/Start.fxml"));
-			AnchorPane apane = (AnchorPane) loader.load();
-			
-			//MainController controller = loader.getController();
-			//controller.setMain(this);
-			
-			Scene scene = new Scene(apane);
-			primaryStage.setScene(scene);
-			primaryStage.setTitle("CMSC 23 Chess Removals MP");
-			primaryStage.getIcons().add(new Image("file:icon.png"));
-			primaryStage.setResizable(false);
-			primaryStage.show();
-			
-		} 
-		
-		catch (IOException e) 
-		{
-			e.printStackTrace();
-		}
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("view/MainView.fxml"));
+		mainLayout = loader.load();
+		Scene scene = new Scene(mainLayout);
+		primaryStage.setScene(scene);
+		primaryStage.show();
 	}
 	
 	public static void main(String[] args) {
