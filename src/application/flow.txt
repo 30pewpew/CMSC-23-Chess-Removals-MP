@@ -1,0 +1,7 @@
+Main.java
+- game menu
+- game
+- show rules
+- show leaderboards (highscore)
+- 
+- 

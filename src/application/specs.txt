@@ -1,0 +1,17 @@
+CMSC 23 Removals
+
+Create a chess game for 2 players.
+Game process:
+- A player must make a move then press a button to signal the next player's turn
+- The board must switch on each player's turn 
+	on player 1's turn, his pieces are on the bottom of the board
+	on player 2's turn, his pieces are also on the bottom of the board
+- The game must provide functions like castling and promotion
+- There must be a message when a "check" happens
+- The game ends when a king is killed (no need to check for check mate)
+- There must be a new game and exit function
+
+Additional notes:
+You are the one responsible for setting the date of the presentation of this MP.
+The maximum time to remove a 4 is 1 year which means you can present your work anytime from Jan 2018 to Dec 2018 
+as long I agree with the time and date.
